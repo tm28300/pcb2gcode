@@ -1,0 +1,2 @@
+Configuration :
+$ PKG_CONFIG_PATH=/usr/local/lib/pkgconfig cmake -S . -B build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS='-s' -DPCB2GCODE_COMPILE_WARNING_AS_ERROR=OFF -DBUILD_TESTING=OFF

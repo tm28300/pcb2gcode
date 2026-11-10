@@ -13,6 +13,8 @@
 #include <vector>
 #include <sstream>
 #include <cstdlib>
+#include <thread>
+#include <chrono>
 
 #ifndef _WIN32
 #include <unistd.h>
@@ -115,7 +117,7 @@ static ProcessResult run_process(const std::string& exec_path, const std::vector
                     }
                     break;
                 }
-                usleep(5000);
+                std::this_thread::sleep_for(std::chrono::milliseconds(5));
             }
         }
 
